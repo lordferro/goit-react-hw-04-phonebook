@@ -59,7 +59,7 @@ export const App = () => {
   };
 
   const handleDelete = id => {
-    console.log(contacts);
+
     return setContact(state => state.filter(contact => contact.id !== id));
   };
 
