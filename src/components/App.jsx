@@ -7,8 +7,11 @@ import { Wrapper } from './App.styled';
 import { useEffect, useState } from 'react';
 
 export const App = () => {
+
+  console.log(JSON.parse(window.localStorage.getItem('contacts')));
   const [contacts, setContact] = useState(
-    (JSON.parse(window.localStorage.getItem('contacts')).length !== 0 &&
+    (JSON.parse(window.localStorage.getItem('contacts')) !== null &&
+      JSON.parse(window.localStorage.getItem('contacts')).length !== 0 &&
       JSON.parse(window.localStorage.getItem('contacts'))) || [
       { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
       { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
