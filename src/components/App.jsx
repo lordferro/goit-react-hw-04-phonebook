@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 
 export const App = () => {
 
-  console.log(JSON.parse(window.localStorage.getItem('contacts')));
   const [contacts, setContact] = useState(
     (JSON.parse(window.localStorage.getItem('contacts')) !== null &&
       JSON.parse(window.localStorage.getItem('contacts')).length !== 0 &&
